@@ -47,4 +47,27 @@ func main() {
 
 	s = append(s, 110)
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+
+	salarios := map[string]int {
+		"Carlos": 1000,
+		"João": 2000,
+		"Maria": 3000,
+	}
+
+	fmt.Println(salarios)
+	fmt.Println(salarios["Carlos"])
+
+	delete(salarios, "Carlos")
+	salarios["Car"] = 5000
+
+
+	fmt.Println(salarios)
+
+	for nome, salario := range salarios {
+		fmt.Printf("O salario de %s é %d\n", nome, salario)
+	}
+	for _, salario := range salarios {
+		fmt.Printf("O salario é %d\n", salario)
+	}
+
 }
