@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-		var meuArray [3]int
+	var meuArray [3]int
 	meuArray[0] = 10
 	meuArray[1] = 20
 	meuArray[2] = 30
@@ -24,10 +24,10 @@ func main() {
 	s = append(s, 110)
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 
-	salarios := map[string]int {
+	salarios := map[string]int{
 		"Carlos": 1000,
-		"João": 2000,
-		"Maria": 3000,
+		"João":   2000,
+		"Maria":  3000,
 	}
 
 	fmt.Println(salarios)
@@ -36,14 +36,13 @@ func main() {
 	delete(salarios, "Carlos")
 	salarios["Car"] = 5000
 
-
 	fmt.Println(salarios)
 
 	for nome, salario := range salarios {
 		fmt.Printf("O salario de %s é %d\n", nome, salario)
 	}
+
 	for _, salario := range salarios {
 		fmt.Printf("O salario é %d\n", salario)
 	}
-
 }
