@@ -16,6 +16,11 @@ func main() {
 
 	fmt.Println(sum2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
 
+	total := func() int {
+		return sum2(1651, 651, 161, 894, 648, 698) * 2
+	}()
+
+	fmt.Println(total)
 }
 
 func sum(a, b int) (int, error) {
