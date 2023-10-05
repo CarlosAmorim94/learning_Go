@@ -14,6 +14,8 @@ func main() {
 
 	fmt.Println(value)
 
+	fmt.Println(sum2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
 }
 
 func sum(a, b int) (int, error) {
@@ -21,4 +23,11 @@ func sum(a, b int) (int, error) {
 		return 0, errors.New("Valor maior que 10")
 	}
 	return a + b, nil
+}
+func sum2(numeros ...int) int {
+	total := 0
+	for _, numero := range numeros {
+		total += numero
+	}
+	return total
 }
